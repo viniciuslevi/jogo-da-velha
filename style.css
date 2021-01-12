@@ -1,0 +1,39 @@
+.container {
+    width: 100vw;
+    max-width: 600px;
+    height: 100vw;
+    max-height: 500px;
+    margin: 0 auto;
+    background-color: #34495e;
+    color: #fff;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr)
+  }
+  
+  .container>div {
+    border: 6px solid #2c3e50;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container>div.winner {
+    background-color: yellow;
+  }
+  .placar{
+    width: max-content;
+    height: min-content;
+    border-radius: 10px;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 25px auto 0px auto;
+    padding: 10px;
+    background-color:rgba(0, 0, 255, 0.5);
+    }
+
+    .placar div{
+      margin-top:2px;
+      border-radius: 3px;
+    }

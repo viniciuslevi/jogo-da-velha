@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOGO DA VELHA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container"></div>
+    <input type="button" value="Reiniciar" style="margin: 10px auto; display: block;" onclick="game.start()">
+    <div class="placar">
+        <div class="x"></div>
+        <div class="o"></div>
+    </div>
+    <div class="players">
+        <label for="player1">Jogador X: </label>
+        <input type="text" name="player1" id="player1">
+        <label for="player2">Jogador O: </label>
+        <input type="text" name="player2" id="player2">
+        <input type="button" value="Enviar" onclick="clicou()">
+    </div>
+
+    <script src="script.js"></script>
+    <script> 
+ // THE BOTH FUNCTIONS ARE CALLED FRIST
+    game.init(  document.querySelector('.container')  );
+    game.draw();
+    function clicou(){
+        game.getPlacar (   document.querySelectorAll(".placar div"), document.querySelectorAll(".players input")  );
+        game.drawPlacar();
+        document.querySelector('.players').style.display = 'none';
+    }
+    </script>
+</body>
+</html>
